@@ -1,0 +1,156 @@
+Smoke testing is where we check the core functionality to make sure it’s stable and bug free.
+In the application, smoke testing, in the technical side.
+
+We do smoke:
+
+    A.  In Cucumber:
+        - By @Smoke tag
+        - And run by calling tag in Runner class
+        - Can also create a whole Smoke (or Regression) Feature page to create a suite
+
+        Most important functionalities
+        - Login
+        - Create a new employee
+
+        Tags in the Runner class can run multiple tags:
+        - ex: Regression testing is tags = ""@Smoke and @Regression"
+
+* Decided by the three amigos (business analyst, developers, testers)
+
+Regression testing is when we want to check new functionalities to make sure they don't disrupt
+the current program functionality.  Regression before major bug fix, new release.
+
+    B.  Selenium / TestNG
+        - by using the .XML file
+
+        Erkan's company example:
+        There were no automation tests in the beginning.
+        They did 45-50 Scenarios in 5 months (in TestNG, so not Cucumber features)
+        7 of them were Smoke
+
+
+
+        It depends, but there is approximately 45-50 test cases
+
+        For each user story there could be multiple Scenarios
+
+        These numbers would be accurate with an example from Erkan when he worked with Tangerine Bank
+
+        14 teams
+        each has:
+            - 3 testers
+            - 2 automations
+        30 people developing
+
+        Vesile's numbers for us (would match this size team)
+        Regression== 183 features - 674 scenarios - 7092 steps - 3h 21 min
+        Smoke == 43 Features - 117 scenarios - 1066 steps - 43 minutes
+
+        TD Bank Example:
+        - Core Application
+        - Insurance
+        - Brokerage App
+        - Real Estate
+
+        Dealing with Bugs:
+        - Report to the Lead QA or whoever
+
+        When you see a test case failed:
+        - Rerun the test cases that failed
+        - Do manually and make sure there is no bug
+        - If there is no bug then you check your coding and make sure it's working fine
+        - Synchronization issue (very fast or slow or not clicking) or locator change
+        - Then rerun
+        - Can also check with co-worker
+        - If you and your co-worker not sure, ask manager to approve or not
+
+          ONLY REPORT IF YOU'RE 100% SURE
+
+          * You should always ask for sign-off and take no responsibility because
+          if you're wrong it wastes a lot of developer time
+
+        Condition into plugin to re-run the failed tests in a new place "rerun"
+
+        Data Driven Testing
+        We use Data Provider in Testing - which means working with multiple data
+        we can work different data by creating an array of combinations
+
+        Start-Up
+            Will have less test cases in smoke/reg suite
+        Mid to Larger sized
+            Will have more test cases in smoke/reg suite
+
+        You decide where to put regression or smoke
+
+        Smoke:
+        25 test cases take 15-20 mins
+
+        Non-functional testing
+        Dynamic
+        We don't do non-functional
+
+        Functional testing
+
+        Criteria for what will I automate or not?
+        Yes:
+            Not possible to automate everything
+            Time limit
+            Something that will be done alot
+        No:
+        Captcha you can't
+        Download section
+        Subject validation
+        User experience
+        Quality control
+
+        Penetrating testing
+        Component testing - done after unit testing, each component, a component
+            that works by itself
+        Integration combines them all
+
+        Kanban system use Jira to hold our User Story, Epics, Bugs
+            connection with team, track workflow, it's management tool,
+            bug management, task assignment
+
+        The SDLC
+        To create a high quality product and to release to customer
+        The STLC
+        Whatever from SDLC that is related to testing
+        From Scope of testing
+        To create a high quality product and to release to customer
+        A product that doesn't have any defect and matches the requirements
+
+        Find bugs as early as possible, create and maintain our framework
+
+        System testing - everything from beginning to end
+
+        UAT - publish beta first
+        performance testing - whole system rather than parts
+        Risk-based Testing - prioritizing testing
+
+        Developer environment - is not stable, could be changing a lot still
+        Pre-Production
+
+        Verification
+        Verifying requirements (static)
+        You verify an ID
+
+        Validation
+        Action related (dynamic)
+        Is a feature acting in a way you want
+        Validate you ticket
+
+        Requirement
+        Def.
+
+        Who decides
+
+        How to tell if it's good or bad?
+            SMART
+
+        Testing Heirarchy
+            Unit
+            Component
+            System
+            UAT
+
