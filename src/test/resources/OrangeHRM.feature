@@ -166,7 +166,7 @@ Feature: We are creating this feature file to add Orange HRM Scenarios
     And The user wants to click save Nationality
     And The user should be able to see "Catwoman" in Nationality Page
 
-    @PageObjectModel2
+    @PageObjectModel2 @Parallel
     Scenario: Verify that we can click all the checkboxes are available
       Given The user wants to login as admin
       Then The user wants to verify dashboard

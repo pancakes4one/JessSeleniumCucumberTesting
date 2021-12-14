@@ -8,7 +8,7 @@ Scenario: Login to Orange HRM
 
 
 
-  @Smoke_Test
+  @Smoke_Test @Parallel
 Scenario: Verify add new employee with login cred (with List)
 Given The user wants to go to the OrangeHRM app
 When The user wants to login to OrangeHRM using List

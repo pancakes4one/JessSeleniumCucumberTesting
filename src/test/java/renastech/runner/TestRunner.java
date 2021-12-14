@@ -8,16 +8,13 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features =   "src/test/resources",                  // "@target/rerun.txt",
         glue = "renastech/Steps_Definitions",
-        tags = "@Excel",
-        dryRun = true
-
-//        {
-        //will check for undefined Step Definitions
-//        plugin = { "pretty",
-//                "html:target/default-cucumber-reports.html",  //define location and name it
-//                "json:target/cucumber.json",
-//                "rerun:target/rerun.txt"
-//        }
+        tags = "@Smoke_Test",
+        dryRun = false,
+        plugin = { "pretty",
+                "html:target/default-cucumber-reports.html",  //define location and name it
+                "json:target/cucumber.json",
+                "rerun:target/rerun.txt"
+        }
 
 )
 public class TestRunner {
